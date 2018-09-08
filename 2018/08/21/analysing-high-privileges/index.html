@@ -82,7 +82,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="academic,thesis,mobile,security,exploit," />
+  <meta name="keywords" content="thesis,mobile,security,exploit,android," />
 
 
 
@@ -100,13 +100,13 @@
 
 
 
-<meta name="description" content="This project is an extension to my thesis for the degree of master in computing at National University of Singapore, School of Computing. This work talks about the most popular un-rooted approach to">
-<meta name="keywords" content="academic,thesis,mobile,security,exploit">
+<meta name="description" content="The number of Android smartphone and tablet users has experienced a rapid growth in the past few years and it raises users’ awareness on the privacy and security of their mobile devices. The feature">
+<meta name="keywords" content="thesis,mobile,security,exploit,android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Analysing Use of High Privileges in Android Applications">
 <meta property="og:url" content="http://mark-h-meng.github.io/2018/08/21/analysing-high-privileges/index.html">
 <meta property="og:site_name" content="Mark&#39;s Tech Blog">
-<meta property="og:description" content="This project is an extension to my thesis for the degree of master in computing at National University of Singapore, School of Computing. This work talks about the most popular un-rooted approach to">
+<meta property="og:description" content="The number of Android smartphone and tablet users has experienced a rapid growth in the past few years and it raises users’ awareness on the privacy and security of their mobile devices. The feature">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://mark-h-meng.github.io/2018/08/21/analysing-high-privileges/android.jpg">
 <meta property="og:image" content="http://mark-h-meng.github.io/2018/08/21/analysing-high-privileges/introXposedHooking.png">
@@ -121,10 +121,10 @@
 <meta property="og:image" content="http://mark-h-meng.github.io/2018/08/21/analysing-high-privileges/analysis-recordable-free.png">
 <meta property="og:image" content="http://mark-h-meng.github.io/2018/08/21/analysing-high-privileges/exploit-sequence-diagram-edward.png">
 <meta property="og:image" content="http://mark-h-meng.github.io/2018/08/21/analysing-high-privileges/tutorial-exploit.png">
-<meta property="og:updated_time" content="2018-09-06T02:33:05.123Z">
+<meta property="og:updated_time" content="2018-09-08T10:15:35.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Analysing Use of High Privileges in Android Applications">
-<meta name="twitter:description" content="This project is an extension to my thesis for the degree of master in computing at National University of Singapore, School of Computing. This work talks about the most popular un-rooted approach to">
+<meta name="twitter:description" content="The number of Android smartphone and tablet users has experienced a rapid growth in the past few years and it raises users’ awareness on the privacy and security of their mobile devices. The feature">
 <meta name="twitter:image" content="http://mark-h-meng.github.io/2018/08/21/analysing-high-privileges/android.jpg">
 
 
@@ -206,22 +206,32 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
           </a>
         </li>
       
@@ -305,8 +315,7 @@
       
         <div align="center" style="padding-bottom:15px;" width="100"><img src="/2018/08/21/analysing-high-privileges/android.jpg"></div>
 
-<p>This project is an extension to my thesis for the degree of master in computing at National University of Singapore, School of Computing. This work talks about the most popular un-rooted approach to escalate privilege on Android OS.<br><a id="more"></a></p>
-<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>The number of Android smartphone and tablet users has experienced a rapid growth in the past few years and it raises users’ awareness on the privacy and security of their mobile devices. The features of openness and extensibility make Android unique, attractive and competitive but meanwhile vulnerable to malicious attack.<br>There are lots of users rooting their Android devices for some useful functions, which are not originally provided to developers and users, such as backup and taking screenshot. However, after observing the danger of rooting devices, the developers begin to look for other non-root alternatives to implement those functions. ADB workaround is one of the best known non-root alternatives to help app gain higher privilege on Android. It used to be considered as a secure practice until some cases of ADB privilege leakage have been found.In this project, we design an approach and implement a couple of tools to detect the privilege leakage in Android apps. We apply them to analyse three real-world apps with millions of users, and successfully identify three ADB privilege leaks from them. Moreover, we also conduct an exploitation of the ADB privilege in one app, and therefore we prove the existence of vulnerabilities in ADB workaround. Based on out study, we propose some suggestion to help developers create their apps that could not only satisfy users’ needs but also protect users’ privacy from similar attacks in future.</p>
+<p>The number of Android smartphone and tablet users has experienced a rapid growth in the past few years and it raises users’ awareness on the privacy and security of their mobile devices. The features of openness and extensibility make Android unique, attractive and competitive but meanwhile vulnerable to malicious attack. There are lots of users rooting their Android devices for some useful functions, which are not originally provided to developers and users, such as backup and taking screenshot. However, after observing the danger of rooting devices, the developers begin to look for other non-root alternatives to implement those functions. <a id="more"></a> ADB workaround is one of the best known non-root alternatives to help app gain higher privilege on Android. It used to be considered as a secure practice until some cases of ADB privilege leakage have been found.In this project, we design an approach and implement a couple of tools to detect the privilege leakage in Android apps. We apply them to analyse three real-world apps with millions of users, and successfully identify three ADB privilege leaks from them. Moreover, we also conduct an exploitation of the ADB privilege in one app, and therefore we prove the existence of vulnerabilities in ADB workaround. Based on out study, we propose some suggestion to help developers create their apps that could not only satisfy users’ needs but also protect users’ privacy from similar attacks in future.</p>
 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>The rise of mobile devices has greatly enriched people’s lives in this digital era. As the dominator of current mobile device market, Android reserves over 82.8% of the entire smartphone market share [13]. Andy Rubin, the VP of Google stated on his twitter that the number of Android devices activated per day has reach 1.3 millions in past few years [21]. The global gross shipments of Android devices is expected to grow from 1.2 billion in 2015 to 1.54 billions in 2019 [12]. The over-reliance on mobile devices makes people save all the data regardless of personal or business purpose onto their smartphone or tablet, which may lead their privacy under exposure if no proper protection has been enforced.</p>
 <p>Android is well-known by its rich functionality and customisation, but there are still some requirements which cannot be implemented by using the official APIs. Google creates a collection of permission labels to define the privilege of apps running on Android OS. Some actions like reading the content displaying on the screen, in another word taking screenshot, was marked as <em>signature level</em> permission, hence are not allowed to be realised by the third party application. As long as the requirement of users exists, the developers would never stop to push the boundary. For that reason, developers are all motivated and successfully come up with two approaches to solve the permission dilemma, namely “rooting the phone” and “ADB workaround”.</p>
 <p>Rooting the devices could enable users to gain the administration privileges to do anything they want such as removing pre-installed apps, unlocking more functionalities, or sometimes just simply changing the theme of UI. According to a statistic done by Kristijan Lucic in 2014 [15], there are over 27.44% users indicating that they have rooted their smartphones to remove redundant and useless pre-installed applications. However, there are several security issues behind the “rooting” because it disables the permission mechanism on Android system. </p>
@@ -794,8 +803,6 @@ iput v1, p0, Luk/org/invisibility/recorder/service/RecordService;
       
         <div class="post-tags">
           
-            <a href="/tags/academic/" rel="tag">#academic</a>
-          
             <a href="/tags/thesis/" rel="tag">#thesis</a>
           
             <a href="/tags/mobile/" rel="tag">#mobile</a>
@@ -803,6 +810,8 @@ iput v1, p0, Luk/org/invisibility/recorder/service/RecordService;
             <a href="/tags/security/" rel="tag">#security</a>
           
             <a href="/tags/exploit/" rel="tag">#exploit</a>
+          
+            <a href="/tags/android/" rel="tag">#android</a>
           
         </div>
       
@@ -878,14 +887,14 @@ iput v1, p0, Luk/org/invisibility/recorder/service/RecordService;
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
-               alt="Mark Meng" />
-          <p class="site-author-name" itemprop="name">Mark Meng</p>
+               alt="Mark H. Meng" />
+          <p class="site-author-name" itemprop="name">Mark H. Meng</p>
           <p class="site-description motion-element" itemprop="description">Mark Meng's Tech Blog</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -894,10 +903,10 @@ iput v1, p0, Luk/org/invisibility/recorder/service/RecordService;
 
           
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">6</span>
+              <a href="/tags">
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">tags</span>
-              
+              </a>
             </div>
           
 
@@ -931,7 +940,7 @@ iput v1, p0, Luk/org/invisibility/recorder/service/RecordService;
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-number">2.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Background"><span class="nav-number">3.</span> <span class="nav-text">Background</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Privilege-amp-Permission-on-Android"><span class="nav-number">3.1.</span> <span class="nav-text">Privilege &amp; Permission on Android</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Privilege-Escalation"><span class="nav-number">3.2.</span> <span class="nav-text">Privilege Escalation </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Rooting"><span class="nav-number">3.2.1.</span> <span class="nav-text">Rooting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Non-root-Alternative"><span class="nav-number">3.2.2.</span> <span class="nav-text">Non-root Alternative</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reverse-Engineering-on-Android"><span class="nav-number">3.3.</span> <span class="nav-text">Reverse Engineering on Android</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Instrumentation"><span class="nav-number">3.4.</span> <span class="nav-text">Instrumentation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Approach-amp-Case-Studies"><span class="nav-number">4.</span> <span class="nav-text">Approach &amp; Case Studies</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Approach"><span class="nav-number">4.1.</span> <span class="nav-text">Approach</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Case-Studies"><span class="nav-number">4.2.</span> <span class="nav-text">Case Studies</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#App-I-–-“Screenshot-Ultimate”"><span class="nav-number">4.2.1.</span> <span class="nav-text">App I – “Screenshot Ultimate”</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Analysis-of-ADB-Channel"><span class="nav-number">4.2.1.1.</span> <span class="nav-text">Analysis of ADB Channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Decompilation-of-APK"><span class="nav-number">4.2.1.2.</span> <span class="nav-text">Decompilation of APK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ASL-Library-amp-Static-Analysis-of-Socket-Channel"><span class="nav-number">4.2.1.3.</span> <span class="nav-text">ASL Library &amp; Static Analysis of Socket Channel</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#App-II-–-“No-Root-Screenshot-It”"><span class="nav-number">4.2.2.</span> <span class="nav-text">App II – “No Root Screenshot It”</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Analysis-of-ADB-Channel-1"><span class="nav-number">4.2.2.1.</span> <span class="nav-text">Analysis of ADB Channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Static-Analysis-of-Socket-Channel"><span class="nav-number">4.2.2.2.</span> <span class="nav-text">Static Analysis of Socket Channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamic-Analysis-of-Socket-Channel"><span class="nav-number">4.2.2.3.</span> <span class="nav-text">Dynamic Analysis of Socket Channel</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#App-III-–-“FREE-screen-recorder-NO-ROOT”"><span class="nav-number">4.2.3.</span> <span class="nav-text">App III – “FREE screen recorder NO ROOT”</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Proxy-Service-Identification"><span class="nav-number">4.2.3.1.</span> <span class="nav-text">Proxy Service Identification</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Decompilation"><span class="nav-number">4.2.3.2.</span> <span class="nav-text">Decompilation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamic-Analysis-on-Socket-Channel"><span class="nav-number">4.2.3.3.</span> <span class="nav-text">Dynamic Analysis on Socket Channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Poaching-the-Passcode"><span class="nav-number">4.2.3.4.</span> <span class="nav-text">Poaching the Passcode</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exploitation"><span class="nav-number">5.</span> <span class="nav-text">Exploitation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Related-Work"><span class="nav-number">6.</span> <span class="nav-text">Related Work</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conclusion-amp-Future-Work"><span class="nav-number">7.</span> <span class="nav-text">Conclusion &amp; Future Work</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Acknowledge"><span class="nav-number">8.</span> <span class="nav-text">Acknowledge</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bibliography"><span class="nav-number">9.</span> <span class="nav-text">Bibliography</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Appendix"><span class="nav-number">10.</span> <span class="nav-text">Appendix</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abbreviation"><span class="nav-number">10.1.</span> <span class="nav-text">Abbreviation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statistics-of-Screenshot-Application"><span class="nav-number">10.2.</span> <span class="nav-text">Statistics of Screenshot Application</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Snippets-of-Hooking-App-II"><span class="nav-number">10.3.</span> <span class="nav-text">Code Snippets of Hooking App II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Relevant-Materials-For-This-Project"><span class="nav-number">10.4.</span> <span class="nav-text">Relevant Materials For This Project</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Background"><span class="nav-number">2.</span> <span class="nav-text">Background</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Privilege-amp-Permission-on-Android"><span class="nav-number">2.1.</span> <span class="nav-text">Privilege &amp; Permission on Android</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Privilege-Escalation"><span class="nav-number">2.2.</span> <span class="nav-text">Privilege Escalation </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Rooting"><span class="nav-number">2.2.1.</span> <span class="nav-text">Rooting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Non-root-Alternative"><span class="nav-number">2.2.2.</span> <span class="nav-text">Non-root Alternative</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reverse-Engineering-on-Android"><span class="nav-number">2.3.</span> <span class="nav-text">Reverse Engineering on Android</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Instrumentation"><span class="nav-number">2.4.</span> <span class="nav-text">Instrumentation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Approach-amp-Case-Studies"><span class="nav-number">3.</span> <span class="nav-text">Approach &amp; Case Studies</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Approach"><span class="nav-number">3.1.</span> <span class="nav-text">Approach</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Case-Studies"><span class="nav-number">3.2.</span> <span class="nav-text">Case Studies</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#App-I-–-“Screenshot-Ultimate”"><span class="nav-number">3.2.1.</span> <span class="nav-text">App I – “Screenshot Ultimate”</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Analysis-of-ADB-Channel"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">Analysis of ADB Channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Decompilation-of-APK"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">Decompilation of APK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ASL-Library-amp-Static-Analysis-of-Socket-Channel"><span class="nav-number">3.2.1.3.</span> <span class="nav-text">ASL Library &amp; Static Analysis of Socket Channel</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#App-II-–-“No-Root-Screenshot-It”"><span class="nav-number">3.2.2.</span> <span class="nav-text">App II – “No Root Screenshot It”</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Analysis-of-ADB-Channel-1"><span class="nav-number">3.2.2.1.</span> <span class="nav-text">Analysis of ADB Channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Static-Analysis-of-Socket-Channel"><span class="nav-number">3.2.2.2.</span> <span class="nav-text">Static Analysis of Socket Channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamic-Analysis-of-Socket-Channel"><span class="nav-number">3.2.2.3.</span> <span class="nav-text">Dynamic Analysis of Socket Channel</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#App-III-–-“FREE-screen-recorder-NO-ROOT”"><span class="nav-number">3.2.3.</span> <span class="nav-text">App III – “FREE screen recorder NO ROOT”</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Proxy-Service-Identification"><span class="nav-number">3.2.3.1.</span> <span class="nav-text">Proxy Service Identification</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Decompilation"><span class="nav-number">3.2.3.2.</span> <span class="nav-text">Decompilation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamic-Analysis-on-Socket-Channel"><span class="nav-number">3.2.3.3.</span> <span class="nav-text">Dynamic Analysis on Socket Channel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Poaching-the-Passcode"><span class="nav-number">3.2.3.4.</span> <span class="nav-text">Poaching the Passcode</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exploitation"><span class="nav-number">4.</span> <span class="nav-text">Exploitation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Related-Work"><span class="nav-number">5.</span> <span class="nav-text">Related Work</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conclusion-amp-Future-Work"><span class="nav-number">6.</span> <span class="nav-text">Conclusion &amp; Future Work</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Acknowledge"><span class="nav-number">7.</span> <span class="nav-text">Acknowledge</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bibliography"><span class="nav-number">8.</span> <span class="nav-text">Bibliography</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Appendix"><span class="nav-number">9.</span> <span class="nav-text">Appendix</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abbreviation"><span class="nav-number">9.1.</span> <span class="nav-text">Abbreviation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statistics-of-Screenshot-Application"><span class="nav-number">9.2.</span> <span class="nav-text">Statistics of Screenshot Application</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Snippets-of-Hooking-App-II"><span class="nav-number">9.3.</span> <span class="nav-text">Code Snippets of Hooking App II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Relevant-Materials-For-This-Project"><span class="nav-number">9.4.</span> <span class="nav-text">Relevant Materials For This Project</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -954,7 +963,7 @@ iput v1, p0, Luk/org/invisibility/recorder/service/RecordService;
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Mark Meng</span>
+  <span class="author" itemprop="copyrightHolder">Mark H. Meng</span>
 </div>
 
 <div class="powered-by">
